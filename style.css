@@ -1,0 +1,163 @@
+/* Genel Ayarlar */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  margin: 0;
+}
+
+.app-container {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px; /* Görseldeki boyuta yakın bir genişlik */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Başlık */
+header h1 {
+  text-align: center;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* Arama Çubuğu */
+.search-container {
+  text-align: center;
+}
+
+#filterInput {
+  width: 95%;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 16px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Not Giriş Alanı */
+.note-input-area {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+#noteTextarea {
+  width: 100%;
+  min-height: 120px;
+  border: none;
+  resize: none;
+  font-size: 16px;
+  padding: 10px 0;
+  box-sizing: border-box;
+  outline: none; /* Odaklandığında çıkan çerçeveyi kaldırır */
+}
+
+/* Kontrol Satırı (Renk Seçici ve Ekle Butonu) */
+.controls-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  border-top: 1px solid #eee;
+}
+
+/* Renk Seçici */
+.color-picker {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.color-option {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border-color 0.2s;
+  position: relative;
+}
+
+.color-option.selected {
+  border-color: #555; /* Seçili rengi vurgulamak için çerçeve */
+}
+
+/* Seçili renk için onay işareti (Görseldeki gibi) */
+.color-option.selected::after {
+  content: "\2713"; /* Unicode onay işareti */
+  color: #333;
+  font-size: 14px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Ekle Butonu */
+.add-button {
+  background-color: #5cb85c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.add-button:hover {
+  background-color: #4caf50;
+}
+
+/* Not Listesi */
+.notes-list-container {
+  display: flex;
+  overflow-x: auto; /* Yatay kaydırma */
+  gap: 15px;
+  padding: 10px 0;
+}
+
+.note-item {
+  min-width: 150px; /* Görseldeki gibi kısa notlar için min genişlik */
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  color: #333;
+  text-align: center;
+  transition: transform 0.2s;
+  flex-shrink: 0; /* Küçülmesini engeller */
+}
+
+.note-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Scrollbar stilini özelleştirme (isteğe bağlı) */
+.notes-list-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.notes-list-container::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 10px;
+}
+
+.notes-list-container::-webkit-scrollbar-track {
+  background-color: #f0f0f0;
+}

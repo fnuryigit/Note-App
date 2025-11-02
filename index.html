@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ödev 2 - NotesApp</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="app-container">
+      <header>
+        <h1>NotesApp</h1>
+      </header>
+
+      <div class="search-container">
+        <input type="text" id="filterInput" placeholder="Search..." />
+      </div>
+
+      <div class="note-input-area">
+        <textarea
+          id="noteTextarea"
+          placeholder="Enter your note here..."
+        ></textarea>
+
+        <div class="controls-row">
+          <div class="color-picker" id="colorPicker">
+            <div
+              class="color-option"
+              data-color="#E2F0CB"
+              style="background-color: #e2f0cb"
+            ></div>
+            <div
+              class="color-option"
+              data-color="#FCE883"
+              style="background-color: #fce883"
+            ></div>
+            <div
+              class="color-option"
+              data-color="#A7D7E9"
+              style="background-color: #a7d7e9"
+            ></div>
+            <div
+              class="color-option"
+              data-color="#F2B2CF"
+              style="background-color: #f2b2cf"
+            ></div>
+            <div
+              class="color-option selected"
+              data-color="#D7E0FF"
+              style="background-color: #d7e0ff"
+            ></div>
+          </div>
+          <button id="addButton" class="add-button">ADD</button>
+        </div>
+      </div>
+
+      <div id="notesContainer" class="notes-list-container"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
