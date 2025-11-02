@@ -22,9 +22,6 @@ Basit bir **Note App** uygulaması. Kullanıcılar not ekleyebilir, renk seçebi
 3. “Not Ekle” butonuna tıklayın.  
 4. Filtreleme yapmak için üstteki inputa aramak istediğiniz kelimeyi yazın.  
 
-## Kurulum (Opsiyonel)
-1. Dosyaları bilgisayarınıza indirin: `index.html`, `style.css`, `script.js`  
-2. Tarayıcıda `index.html` dosyasını açın.  
 
 ---
 
